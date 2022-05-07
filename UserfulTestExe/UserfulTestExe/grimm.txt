@@ -1,0 +1,10 @@
+#pragma once
+/*No memory allocation required
+std::string_view 无需复制字符串数据的优点就更加明显了(std::string不进行短字符串优化的情况下)
+(堆)内存分配是一个非常耗时的操作,尽量的避免(堆)内存分配会给程序带来很大的性能提升,
+使用 string_view 能提升程序效率的原因也正是在此,当你需要创建很多 string 的子字符串时, string_view 带来的效率提升将更加明显.
+*/
+#include <cassert>
+#include <string>
+#include <string_view>
+#include "common.h"
